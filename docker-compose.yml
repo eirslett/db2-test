@@ -1,0 +1,10 @@
+version: "3"
+services:
+  database:
+    image: ibmcom/db2express-c
+    ports:
+      - "50000:50000"
+    environment:
+      LICENSE: accept
+      DB2INST1_PASSWORD: thisisnotasafepassword
+    command: db2start
